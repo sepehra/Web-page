@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delayed Character Print</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: arial;
+      font-family: 'Source Code Pro', "Courier New", Courier, monospace !important;
       color: white;
       display: flex;
       justify-content: center;
@@ -17,7 +23,8 @@
     }
     #output {
       font-size: 20px;
-      white-space: pre;
+      white-space: pre-wrap; /* Ensure line breaks are respected */
+      font-family: 'Source Code Pro', "Courier New", Courier, monospace !important;
     }
   </style>
 </head>
@@ -46,8 +53,8 @@
       }
     }
 
-    // Start printing the message
-    printCharacter();
+    // Start printing the message with a slight delay for safety
+    setTimeout(printCharacter, 100);
   </script>
 
 </body>
