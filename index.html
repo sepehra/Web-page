@@ -20,11 +20,24 @@
       height: 100vh;
       margin: 0;
       background-color: #000000;
+      overflow: hidden; /* Prevent scrolling */
     }
     #output {
       font-size: 20px;
-      white-space: pre-wrap; /* Ensure line breaks are respected */
+      white-space: pre-wrap;
       font-family: 'Source Code Pro', "Courier New", Courier, monospace !important;
+      padding: 10px; /* Add padding for better appearance */
+    }
+    /* Responsive styles for smaller screens */
+    @media (max-width: 600px) {
+      #output {
+        font-size: 12px; /* Smaller font size */
+      }
+    }
+    @media (max-width: 400px) {
+      #output {
+        font-size: 8px; /* Even smaller font size for very small screens */
+      }
     }
   </style>
 </head>
