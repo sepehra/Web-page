@@ -6,7 +6,7 @@
   <title>Delayed Character Print</title>
   <style>
     body {
-      font-family: "Courier New", Courier, monospace;
+      font-family: arial;
       color: white;
       display: flex;
       justify-content: center;
@@ -17,7 +17,7 @@
     }
     #output {
       font-size: 20px;
-      white-space: pre-wrap; /* Ensure line breaks are respected */
+      white-space: pre;
     }
   </style>
 </head>
@@ -46,8 +46,8 @@
       }
     }
 
-    // Start printing the message with a slight delay for safety
-    setTimeout(printCharacter, 100);
+    // Start printing the message
+    printCharacter();
   </script>
 
 </body>
